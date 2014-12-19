@@ -11,7 +11,7 @@ $desktopWide : 1200px;
 
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
-
+* { box-sizing: border-box }
 body { 
   padding: 0; 
   margin: 0;
@@ -57,7 +57,7 @@ h1 {
     background-repeat: no-repeat;
   }
 
-  @include background-image-retina('http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at', '320px', '299px');
+  @include background-image-retina(url('http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at'), '320px', '299px');
 
 }
 
@@ -117,7 +117,7 @@ h1 {
   border: dashed 2px red;
   position: relative;
 
-  .tags {
+  .edittags {
     background-color: red;
     padding: 5px;
     position: absolute;

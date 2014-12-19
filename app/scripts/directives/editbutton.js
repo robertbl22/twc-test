@@ -18,12 +18,12 @@ angular.module('twcTestApp')
 					element.addClass('active');
 					element.text('Hide areas');
 					element.data().editmode = true;
-					sections.append('<div class="tags">area ###</div>');
+					sections.append('<div class="edittags">area ###</div>');
 				} else {
 					element.removeClass('active');
 					element.text('Show areas');
 					element.data().editmode = false;
-					sections.find('div').remove();
+					angular.element(document.getElementsByClassName('edittags')).remove();
 				}
 			});
 		}
