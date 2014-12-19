@@ -114,8 +114,18 @@ h1 {
 }
 
 .editMode {
-  border: dashed 2px red;
   position: relative;
+  border: dashed 2px red;
+
+  &#main, &#instruction, &#sidebar {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &#main *, &#instruction *, &#sidebar * {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
 
   .edittags {
     background-color: red;
