@@ -1,0 +1,16 @@
+@mixin background-image-retina($retinaFile, $width, $height) {
+
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+    .image.retina-support {
+      background-image: url($retinaFile);
+      background-size: $width $height;
+      background-repeat: no-repeat;
+      width: $width;
+      height: $height;
+    }
+  }
+
+}

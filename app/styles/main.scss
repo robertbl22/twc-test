@@ -1,0 +1,128 @@
+// bower:scss
+// endbower
+@import "breakpoint";
+@import "gradient";
+@import "background-image-retina";
+
+$mobileMedium : 480px;
+$tabletVertical : 768px;
+$desktopNormal : 1024px;
+$desktopWide : 1200px;
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+body { 
+  padding: 0; 
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  @include breakpoint($mobileMedium) {
+    padding: 20px;
+  }
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  @include breakpoint($mobileMedium) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+#main { 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  * { 
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @include gradient(#1e5799, #FFFFFF); 
+  @include breakpoint($desktopNormal) {
+    width: 50%;
+    float: left;
+  }
+  .image {
+    width:320px;
+    height: 180px;
+    background-color: black;
+    background-image: url('http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?v=at&w=320&h=180&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0');
+    background-size: 320px 180px;
+    background-repeat: no-repeat;
+  }
+
+  @include background-image-retina('http://dsx.weather.com/util/image/w/68a62f4e-122e-4c72-91b2-ec9f5024e031.jpg?api=7db9fe61-7414-47b5-9871-e17d87b8b6a0&h=598&w=640&v=at', '320px', '299px');
+
+}
+
+#sidebar { 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  * { 
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @include gradient(#b4ddb4, #FFFFFF); 
+  @include breakpoint($desktopNormal) {
+    width: 50%;
+    float: left;
+  }
+}
+#instruction {
+  clear: both;
+  color: #999999;
+  font-size: .8rem;
+  margin: 20px;
+}
+
+.header {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  @include breakpoint($mobileMedium) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.editbutton {
+  background-color: #1e5799;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-bottom: 10px;
+  min-width: 80px;
+  text-align: center;
+
+  &.active {
+    background-color: red;
+  }
+
+  @include breakpoint($mobileMedium) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.editMode {
+  border: dashed 2px red;
+  position: relative;
+
+  .tags {
+    background-color: red;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FFFFFF;
+  }
+}
